@@ -13,10 +13,10 @@ let package = Package(
             name: "BNBOcclusion",
             targets: [
                 "BNBOcclusion",
-                "BNBOcclusionBNBSdkCoreTarget",
-                "BNBOcclusionBNBEffectPlayerTarget",
-                "BNBOcclusionBNBScriptingTarget",
-                "BNBOcclusionBNBFaceTrackerTarget"
+                "BNBOcclusionBNBSdkCore",
+                "BNBOcclusionBNBEffectPlayer",
+                "BNBOcclusionBNBScripting",
+                "BNBOcclusionBNBFaceTracker"
             ]
         ),
     ],
@@ -45,7 +45,7 @@ let package = Package(
             checksum: "d2e973d4efbbc4d5c0338caa4b2450451d6a33f416cf83c0a4847ca4b13b6a77"
         ),
         .target(
-            name: "BNBOcclusionBNBSdkCoreTarget",
+            name: "BNBOcclusionBNBSdkCore",
             dependencies: [
                 .product(
                     name: "BNBSdkCore",
@@ -54,7 +54,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBOcclusionBNBEffectPlayerTarget",
+            name: "BNBOcclusionBNBEffectPlayer",
             dependencies: [
                 .product(
                     name: "BNBEffectPlayer",
@@ -63,7 +63,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBOcclusionBNBScriptingTarget",
+            name: "BNBOcclusionBNBScripting",
             dependencies: [
                 .product(
                     name: "BNBScripting",
@@ -72,7 +72,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBOcclusionBNBFaceTrackerTarget",
+            name: "BNBOcclusionBNBFaceTracker",
             dependencies: [
                 .product(
                     name: "BNBFaceTracker",
