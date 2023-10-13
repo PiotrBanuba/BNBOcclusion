@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-13"
+let bnbPackageVersion: Version = "1.8.0-14"
 
 let package = Package(
     name: "BNBOcclusion",
@@ -13,10 +13,10 @@ let package = Package(
             name: "BNBOcclusion",
             targets: [
                 "BNBOcclusion_Target",
-                "BNBOcclusion_BNBOcclusion_Target",
-                "BNBOcclusion_BNBOcclusion_Target",
-                "BNBOcclusion_BNBOcclusion_Target",
-                "BNBOcclusion_BNBOcclusion_Target"
+                "BNBOcclusion_BNBSdkCore_Target",
+                "BNBOcclusion_BNBEffectPlayer_Target",
+                "BNBOcclusion_BNBScripting_Target",
+                "BNBOcclusion_BNBFaceTracker_Target"
             ]
         ),
     ],
