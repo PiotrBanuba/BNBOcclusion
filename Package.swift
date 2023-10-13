@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-14"
+let bnbPackageVersion: Version = "1.8.0-15"
 
 let package = Package(
     name: "BNBOcclusion",
@@ -12,11 +12,11 @@ let package = Package(
         .library(
             name: "BNBOcclusion",
             targets: [
-                "BNBOcclusion_Target",
-                "BNBOcclusion_BNBSdkCore_Target",
-                "BNBOcclusion_BNBEffectPlayer_Target",
-                "BNBOcclusion_BNBScripting_Target",
-                "BNBOcclusion_BNBFaceTracker_Target"
+                "BNBOcclusion",
+                "BNBOcclusion_BNBSdkCore",
+                "BNBOcclusion_BNBEffectPlayer",
+                "BNBOcclusion_BNBScripting",
+                "BNBOcclusion_BNBFaceTracker"
             ]
         ),
     ],
@@ -40,12 +40,12 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "BNBOcclusion_Target",
+            name: "BNBOcclusion",
             url: "https://d2cm7wtcqqw29.cloudfront.net/1.8.0-58-g46079e7d74/BNBOcclusion.zip",
             checksum: "d2e973d4efbbc4d5c0338caa4b2450451d6a33f416cf83c0a4847ca4b13b6a77"
         ),
         .target(
-            name: "BNBOcclusion_BNBSdkCore_Target",
+            name: "BNBOcclusionBNBSdkCore",
             dependencies: [
                 .product(
                     name: "BNBSdkCore",
@@ -54,7 +54,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBOcclusion_BNBEffectPlayer_Target",
+            name: "BNBOcclusionBNBEffectPlayer",
             dependencies: [
                 .product(
                     name: "BNBEffectPlayer",
@@ -63,7 +63,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBOcclusion_BNBScripting_Target",
+            name: "BNBOcclusionBNBScripting",
             dependencies: [
                 .product(
                     name: "BNBScripting",
@@ -72,7 +72,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "BNBOcclusion_BNBFaceTracker_Target",
+            name: "BNBOcclusionBNBFaceTracker",
             dependencies: [
                 .product(
                     name: "BNBFaceTracker",
