@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-11"
+let bnbPackageVersion: Version = "1.8.0-13"
 
 let package = Package(
     name: "BNBOcclusion",
@@ -12,11 +12,11 @@ let package = Package(
         .library(
             name: "BNBOcclusion",
             targets: [
-                "BNBOcclusion",
-                "BNBSdkCore",
-                "BNBEffectPlayer",
-                "BNBScripting",
-                "BNBFaceTracker"
+                "BNBOcclusion_Target",
+                "BNBOcclusion_BNBOcclusion_Target",
+                "BNBOcclusion_BNBOcclusion_Target",
+                "BNBOcclusion_BNBOcclusion_Target",
+                "BNBOcclusion_BNBOcclusion_Target"
             ]
         ),
     ],
@@ -40,9 +40,45 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "BNBOcclusion",
+            name: "BNBOcclusion_Target",
             url: "https://d2cm7wtcqqw29.cloudfront.net/1.8.0-58-g46079e7d74/BNBOcclusion.zip",
             checksum: "d2e973d4efbbc4d5c0338caa4b2450451d6a33f416cf83c0a4847ca4b13b6a77"
+        ),
+        .target(
+            name: "BNBOcclusion_BNBSdkCore_Target",
+            dependencies: [
+                .product(
+                    name: "BNBSdkCore",
+                    package: "BNBSdkCore"
+                ),
+            ]
+        ),
+        .target(
+            name: "BNBOcclusion_BNBEffectPlayer_Target",
+            dependencies: [
+                .product(
+                    name: "BNBEffectPlayer",
+                    package: "BNBEffectPlayer"
+                ),
+            ]
+        ),
+        .target(
+            name: "BNBOcclusion_BNBScripting_Target",
+            dependencies: [
+                .product(
+                    name: "BNBScripting",
+                    package: "BNBScripting"
+                ),
+            ]
+        ),
+        .target(
+            name: "BNBOcclusion_BNBFaceTracker_Target",
+            dependencies: [
+                .product(
+                    name: "BNBFaceTracker",
+                    package: "BNBFaceTracker"
+                ),
+            ]
         ),
     ]
 )
