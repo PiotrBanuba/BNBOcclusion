@@ -1,7 +1,7 @@
 // swift-tools-version:5.3
 import PackageDescription
 
-let bnbPackageVersion: Version = "1.8.0-9"
+let bnbPackageVersion: Version = "1.8.0-10"
 
 let package = Package(
     name: "BNBOcclusion",
@@ -13,10 +13,10 @@ let package = Package(
             name: "BNBOcclusion",
             targets: [
                 "BNBOcclusion",
-                "BNBOcclusionBNBSdkCore",
-                "BNBOcclusionBNBEffectPlayer",
-                "BNBOcclusionBNBScripting",
-                "BNBOcclusionBNBFaceTracker"
+                "BNBSdkCore",
+                "BNBEffectPlayer",
+                "BNBScripting",
+                "BNBFaceTracker"
             ]
         ),
     ],
@@ -43,42 +43,6 @@ let package = Package(
             name: "BNBOcclusion",
             url: "https://d2cm7wtcqqw29.cloudfront.net/1.8.0-58-g46079e7d74/BNBOcclusion.zip",
             checksum: "d2e973d4efbbc4d5c0338caa4b2450451d6a33f416cf83c0a4847ca4b13b6a77"
-        ),
-        .target(
-            name: "BNBOcclusionBNBSdkCore",
-            dependencies: [
-                .product(
-                    name: "BNBSdkCore",
-                    package: "BNBSdkCore"
-                ),
-            ]
-        ),
-        .target(
-            name: "BNBOcclusionBNBEffectPlayer",
-            dependencies: [
-                .product(
-                    name: "BNBEffectPlayer",
-                    package: "BNBEffectPlayer"
-                ),
-            ]
-        ),
-        .target(
-            name: "BNBOcclusionBNBScripting",
-            dependencies: [
-                .product(
-                    name: "BNBScripting",
-                    package: "BNBScripting"
-                ),
-            ]
-        ),
-        .target(
-            name: "BNBOcclusionBNBFaceTracker",
-            dependencies: [
-                .product(
-                    name: "BNBFaceTracker",
-                    package: "BNBFaceTracker"
-                ),
-            ]
         ),
     ]
 )
